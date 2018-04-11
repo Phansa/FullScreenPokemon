@@ -42,14 +42,15 @@ export class FlashTransition<TGameStartr extends FullScreenPokemon> extends Tran
      * Flashes to and from a color.
      */
     private flash(): void {
+        console.log(this);
         if (this.completed >= this.flashes) {
             this.settings.onComplete();
             return;
         }
-
+        console.log("post");
         const color: string = this.flashColors[this.completed % this.flashColors.length];
         this.completed += 1;
-
+        console.log(this.speed);
         this.gameStarter.actions.animateFadeToColor({
             color,
             change: this.change,

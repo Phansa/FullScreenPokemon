@@ -409,9 +409,9 @@ export class Actions<TGameStartr extends FullScreenPokemon> extends GeneralCompo
             height: this.gameStarter.mapScreener.height,
             opacity: 0,
         });
-
+        console.log("Hello");
         this.gameStarter.things.add(blank);
-
+        console.log(callback);
         this.animateFadeAttribute(
             blank,
             "opacity",
