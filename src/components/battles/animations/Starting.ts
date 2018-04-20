@@ -37,6 +37,7 @@ export class Starting<TGameStartr extends FullScreenPokemon> extends GeneralComp
                     this.setupThings(battleInfo);
                     this.runTeamEntrances(battleInfo, onComplete);
                 },
+                name: "instant",
             });
         });
 
@@ -110,7 +111,7 @@ export class Starting<TGameStartr extends FullScreenPokemon> extends GeneralComp
      */
     private showPlayerPokeballs(battleInfo: IBattleInfo): void {
         if (battleInfo.teams.player.leader) {
-            this.gameStarter.menuGrapher.createMenu("BattlePlayerHealth");
+            this.gameStarter.menuGrapher.createMenu("   ");
             this.gameStarter.menuGrapher.createMenu("BattlePlayerPokeballs");
             this.gameStarter.battles.decorations.addPokeballs(
                 "BattlePlayerPokeballs",

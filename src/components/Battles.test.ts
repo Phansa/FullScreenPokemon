@@ -55,7 +55,7 @@ describe("Battles", () => {
         fsp.battles.animations.complete(BattleOutcome.playerVictory, temp);
         //const spy = sinon.spy(fsp.battles.animations.complete(BattleOutcome.playerVictory, temp));
         clock.tick(250);
-        console.log(fsp.audioPlayer);
+        //console.log(fsp.audioPlayer);
         //console.log(fsp.audioPlayer.hasSound("theme", "Casino"));
     });
 
@@ -106,7 +106,20 @@ describe("Battles", () => {
                     `Wild ${team.selectedActor.nickname.join("")} appeared!`,
             },
         });
-        clock.tick(250);
+        fsp.inputs.keyDownA(player);
+        clock.tick(2100);
+        console.log(fsp.timeHandler);
+        clock.tick(10);
+        console.log(fsp.timeHandler);
+
+        //clock.tick(5000);
+
+        // clock.tick(250);
+        // fsp.inputs.keyDownA(player);
+        // clock.tick(250);
+        // fsp.inputs.keyDownA(player);
+        // clock.tick(250);
+        // fsp.inputs.keyDownA(player);
         console.log(fsp.menuGrapher);
         //const spy = sinon.spy(fsp.battles.animations.complete(BattleOutcome.playerVictory, temp));
     });
